@@ -1,0 +1,58 @@
+.container {
+  margin-bottom: 5%;
+  .new-todo {
+    margin-top: 5%;
+    padding: 4%;
+    border: 2px solid black;
+    border-radius: 10px;
+    form {
+      .form-group {
+        &:nth-child(2) {
+          .disable {
+            pointer-events: none;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+  .existing-todos {
+    clear: both;
+    .col-xs-6 {
+      width: 48%;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: auto;
+      h4 {
+        text-align: center;
+        background: black;
+        color: white;
+        border-radius: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      &:nth-child(2) {
+        .card {
+          .card-body {
+            .btn-group {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .col-xs-12 {
+      width: 96%;
+      margin: auto;
+      overflow: auto;
+      h4 {
+        text-align: center;
+        background: black;
+        color: white;
+        border-radius: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

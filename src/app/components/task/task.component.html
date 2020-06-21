@@ -1,0 +1,25 @@
+<div class="card" *ngFor="let todo of tasks">
+<!-- <div class="card"> -->
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ todo.createdDate | date }}
+    </h5>
+    <p class="card-text">
+      {{ todo.text }}
+    </p>
+    <div class="btn-group btn-group-sm float-right" role="group">
+      <button type="button" class="btn btn-outline-dark" (click)="completed(todo.id)">
+        <!-- Mark as Completed -->
+        <img src="https://img.icons8.com/doodle/32/000000/checkmark.png"/>
+      </button>
+      <button type="button" class="btn btn-outline-dark" (click)="modify(todo.id)">
+        <!-- Modify -->
+        <img src="https://img.icons8.com/officel/32/000000/edit.png"/>
+      </button>
+      <button type="button" class="btn btn-outline-dark" (click)="delete(todo.id)">
+        <!-- Delete -->
+        <img src="https://img.icons8.com/color/32/000000/delete-forever.png"/>
+      </button>
+    </div>
+  </div>
+</div>

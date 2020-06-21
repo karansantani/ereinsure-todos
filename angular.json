@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ereinsure-todos": {
+    "todos": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ereinsure-todos",
+            "outputPath": "dist/todos",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -66,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ereinsure-todos:build"
+            "browserTarget": "todos:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ereinsure-todos:build:production"
+              "browserTarget": "todos:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ereinsure-todos:build"
+            "browserTarget": "todos:build"
           }
         },
         "test": {
@@ -92,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -114,15 +116,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ereinsure-todos:serve"
+            "devServerTarget": "todos:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ereinsure-todos:serve:production"
+              "devServerTarget": "todos:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "ereinsure-todos"
+  "defaultProject": "todos"
 }
